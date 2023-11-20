@@ -33,8 +33,4 @@ jobs:
           git fetch --prune
           git remote add repo git://git.code.sf.net/p/fuse-emulator/libspectrum
           git merge repo/main --allow-unrelated-histories
-
-      - name: "Push all changes"
-        run: |
-          git push
         
