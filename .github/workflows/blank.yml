@@ -24,7 +24,16 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
-      
+
+      - name: debug-whoami
+        run: curl https://ifconfig.me
+
+      - name: debug-host
+        run: host git.code.sf.net
+
+      - name: debug-ping
+        run: host ping -D git.code.sf.net -c 4
+    
       - name: get liblibspectrum
         run: |
           mkdir -p libspectrum
