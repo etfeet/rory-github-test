@@ -28,24 +28,31 @@ jobs:
 
       - name: debug-whoami
         run: curl https://ifconfig.me
+        continue-on-error: true
 
       - name: debug-git-host
         run: host git.code.sf.net
+        continue-on-error: true
 
       - name: debug-main-host
         run: host sourceforge.net
+        continue-on-error: true
         
       - name: debug-git-ping
         run: ping sourceforge.net -c 4
+        continue-on-error: true
 
       - name: debug-main-ping
         run: ping git.code.sf.net -c 4
+        continue-on-error: true
 
       - name: debug-main-curl
         run: curl https://sourceforge.net
+        continue-on-error: true
         
       - name: debug-git-curl
         run: curl https://git.code.sf.net
+        continue-on-error: true
 
         
       - name: debug-git-mtr
