@@ -40,25 +40,26 @@ jobs:
         continue-on-error: true
 
       - name: debug-git-mtr
-        run: mtr -4wb git.code.sf.net
+        run: mtr -4wbuz git.code.sf.net
         continue-on-error: true
           
 
 
 
-  build:
+  build-libspectrum:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v3
+
       
-      - name: libspectrum prep
-        run: |
-          mkdir -p libspectrum
-          cd libspectrum
-          
       - name: get code
-        run: |
-          git clone git://git.code.sf.net/p/fuse-emulator/libspectrum
+        run: git clone https://git.code.sf.net/p/fuse-emulator/libspectrum 
+
+
+  build-ngspice:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+    steps:
+      - name: get code 
+        run: git clone https://git.code.sf.net/p/ngspice/ngspice
         
