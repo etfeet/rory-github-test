@@ -28,7 +28,8 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: run merge
         run: |
-          echo Add other actions to build,
+          git config --global user.email "etfeet@gmail.com"
+          git config --global user.name "etfeet"
           git fetch --prune
           git remote add repo https://git.code.sf.net/p/rory-github-test2/code
           git fetch repo
