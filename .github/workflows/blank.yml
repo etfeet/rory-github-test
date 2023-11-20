@@ -46,9 +46,10 @@ jobs:
       - name: debug-git-mtr
         run: mtr -4wbuz git.code.sf.net
         continue-on-error: true
+
+      - name: debug-git-version
+        run: git --version
           
-
-
 
   clone-libspectrum:
     # The type of runner that the job will run on
