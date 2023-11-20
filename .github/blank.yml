@@ -32,7 +32,7 @@ jobs:
           git config --global user.name "etfeet"
           git fetch --prune
           git remote add repo https://git.code.sf.net/p/fuse-emulator/libspectrum
-          git fetch repo
+          git fetch repo --depth 1
           git merge repo/main --allow-unrelated-histories
 
       - name: "Push all changes"
