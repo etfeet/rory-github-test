@@ -32,7 +32,7 @@ jobs:
         run: host git.code.sf.net
 
       - name: debug-ping
-        run: ping -D git.code.sf.net -c 4
+        run: ping git.code.sf.net -c 4
     
       - name: get liblibspectrum
         run: |
