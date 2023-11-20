@@ -54,12 +54,8 @@ jobs:
         run: curl https://git.code.sf.net
         continue-on-error: true
 
-        
       - name: debug-git-mtr
-        run: |
-          apt-get update -y
-          apt-get install -y mtr
-          mtr -4wb git.code.sf.net
+        run: mtr -4wb git.code.sf.net
           
       - name: get liblibspectrum
         run: |
