@@ -28,12 +28,31 @@ jobs:
       - name: debug-whoami
         run: curl https://ifconfig.me
 
-      - name: debug-host
+      - name: debug-git-host
         run: host git.code.sf.net
 
-      - name: debug-ping
+      - name: debug-main-host
+        run: host sourceforge.net
+        
+      - name: debug-git-ping
+        run: ping sourceforge.net -c 4
+
+      - name: debug-main-ping
         run: ping git.code.sf.net -c 4
-    
+
+      - name: debug-main-curl
+        run: curl https://sourceforge.net
+        
+      - name: debug-git-curl
+        run: curl https://git.code.sf.net
+
+        
+      - name: debug-git-mtr
+        run: |
+          apt-get update -y
+          apt-get install -y mtr
+          mtr -4wb git.code.sf.net
+          
       - name: get liblibspectrum
         run: |
           mkdir -p libspectrum
