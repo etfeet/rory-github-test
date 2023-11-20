@@ -53,7 +53,7 @@ jobs:
 
       
       - name: get code
-        run: git clone https://git.code.sf.net/p/fuse-emulator/libspectrum 
+        run: git clone git://git.code.sf.net/p/fuse-emulator/libspectrum 
 
 
   build-ngspice:
@@ -61,5 +61,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: get code 
-        run: git clone https://git.code.sf.net/p/ngspice/ngspice
-        
+        run: git clone git://git.code.sf.net/p/ngspice/ngspice
+
+  build-ngspice-colo-ip:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+    steps:
+      - name: get code 
+        run: git clone git://216.105.38.16/p/ngspice/ngspice
