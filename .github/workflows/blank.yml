@@ -34,19 +34,19 @@ jobs:
         run: host git.code.sf.net
         continue-on-error: true
 
-      - name: debug-main-host
+      - name: debug-sf-host
         run: host sourceforge.net
         continue-on-error: true
         
-      - name: debug-git-ping
+      - name: debug-sf-ping
         run: ping sourceforge.net -c 4
         continue-on-error: true
 
-      - name: debug-main-ping
+      - name: debug-git-ping
         run: ping git.code.sf.net -c 4
         continue-on-error: true
 
-      - name: debug-main-curl
+      - name: debug-sf-curl
         run: curl https://sourceforge.net
         continue-on-error: true
         
