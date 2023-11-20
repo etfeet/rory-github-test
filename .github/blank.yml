@@ -34,3 +34,7 @@ jobs:
           git remote add repo https://git.code.sf.net/p/rory-github-test2/code
           git fetch repo
           git merge repo/main --allow-unrelated-histories
+
+      - name: "Push all changes"
+        run: |
+          git push
