@@ -35,6 +35,10 @@ jobs:
         run: ping git.code.sf.net -c 4
         continue-on-error: true
 
+      - name: debug-git-colo-ping
+        run: ping 216.105.38.16 -c 4
+        continue-on-error: true
+
       - name: debug-git-curl
         run: curl https://git.code.sf.net
         continue-on-error: true
@@ -46,7 +50,7 @@ jobs:
 
 
 
-  build-libspectrum:
+  clone-libspectrum:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
     steps:
@@ -56,14 +60,14 @@ jobs:
         run: git clone git://git.code.sf.net/p/fuse-emulator/libspectrum 
 
 
-  build-ngspice:
+  clone-ngspice:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
     steps:
       - name: get code 
         run: git clone git://git.code.sf.net/p/ngspice/ngspice
 
-  build-ngspice-colo-ip:
+  clone-ngspice-colo-ip:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
     steps:
