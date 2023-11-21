@@ -27,6 +27,9 @@ jobs:
         run: curl https://ifconfig.me
         continue-on-error: true
 
+      - name: debug-trace
+        run: traceroute 204.68.111.16
+        
       - name: debug-git-host
         run: host git.code.sf.net
         continue-on-error: true
